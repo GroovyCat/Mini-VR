@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1040380235890455852}
   - component: {fileID: 4260055031964954708}
   - component: {fileID: 6314363457023755326}
+  - component: {fileID: 6593653470172059117}
+  - component: {fileID: 2029084744010520118}
   m_Layer: 22
   m_Name: JackOLantern
   m_TagString: Untagged
@@ -162,6 +164,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2029084744010520118}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   destroyDelay: 1
 --- !u!114 &4260055031964954708
 MonoBehaviour:
@@ -192,7 +206,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6144034317226725200}
         m_TargetAssemblyTypeName: EmissionController, Assembly-CSharp
-        m_MethodName: Call
+        m_MethodName: MobCall
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -204,7 +218,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6470394221354982224}
         m_TargetAssemblyTypeName: EmissionController, Assembly-CSharp
-        m_MethodName: Call
+        m_MethodName: MobCall
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -235,6 +249,54 @@ MonoBehaviour:
   dest: {x: 0, y: 2, z: 1}
   min: 0.8
   max: 1.5
+--- !u!114 &6593653470172059117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387089535731134755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f03037622e85e04c8442022586838e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1040380235890455852}
+        m_TargetAssemblyTypeName: MobController, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!135 &2029084744010520118
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387089535731134755}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.0145271
+  m_Center: {x: -0.025847355, y: 0.6, z: 0}
 --- !u!1 &4006666645920931503
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: 5
+  min: 0
+  max: 3
 --- !u!114 &3960956712036279510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +583,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: 5
+  min: 0
+  max: 3
 --- !u!114 &4111423961282956762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,6 +873,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: 5
+  min: 0
+  max: 3
 --- !u!4 &8576279845179918554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e444b9fa9f5125c4eaaf07df4b8f55b8,

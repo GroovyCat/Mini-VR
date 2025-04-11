@@ -11,8 +11,6 @@ public class MobController : MonoBehaviour
 
     private void Start()
     {
-        Invoke(nameof(Destroy), 3f);
-
         OnCreated?.Invoke();
     }
 
