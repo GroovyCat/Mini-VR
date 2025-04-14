@@ -1,18 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MonCounterUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int killCount;
+    private int spawnCount;
+
+    private TextMeshProUGUI textUI;
+
+    private void Awake()
     {
-        
+        textUI = GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateUI()
     {
-        
+        if (!enabled)
+            return;
+
+        textUI.text = $"Kill/Alive/Spawn\n{killCount}/{spawnCount - killCount}/{spawnCount}";
+    }
+
+    private void OnEnable()
+    {
+        killCount = 0; spawnCount = 0;
+        UpdateUI();
+    }
+
+    public void OnSpawn()
+    {
+        spawnCount++;
+        UpdateUI();
+    }
+
+    public void OnKill()
+    {
+        killCount++;
+        UpdateUI();
     }
 }
