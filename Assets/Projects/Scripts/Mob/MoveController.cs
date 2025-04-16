@@ -3,8 +3,6 @@ using UnityEngine.AI;
 
 public class MoveController : MonoBehaviour
 {
-    public Vector3 dest;
-
     private NavMeshAgent target;
 
     public float min = 0.8f;
@@ -16,7 +14,7 @@ public class MoveController : MonoBehaviour
 
     public void Call()
     {
-        target.SetDestination(dest);
+        target.SetDestination(Core.Instance.transform.position);
         target.speed *= Random.Range(min, max);
     }
 }

@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699da68c3fc0141499802d3aa9b70ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dest: {x: 0, y: 2, z: 1}
+  dest: {x: 0, y: 0, z: 0}
   min: 0.8
   max: 1.5
 --- !u!114 &6593653470172059117
