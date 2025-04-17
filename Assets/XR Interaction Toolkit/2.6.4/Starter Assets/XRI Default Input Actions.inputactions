@@ -1013,7 +1013,7 @@
                     "name": "Grab Move",
                     "type": "Button",
                     "id": "c5a6d766-d487-42ae-b293-da4749469e18",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1030,7 +1030,7 @@
                 {
                     "name": "Teleport Select (Button)",
                     "type": "Button",
-                    "id": "cc83d455-03df-414a-9a15-fbd522f71d18",
+                    "id": "2f58e5df-cd0a-47f4-a1a9-a03f2a01460f",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1128,7 +1128,7 @@
                 },
                 {
                     "name": "",
-                    "id": "3358251d-8ab3-4fa1-8729-64c1a5f5a79e",
+                    "id": "332ac061-17dd-4d31-beea-ede2bb86cbfb",
                     "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
@@ -1503,7 +1503,7 @@
                     "name": "Select",
                     "type": "Button",
                     "id": "ac96c10b-c955-4a46-8e67-bf16bc069b53",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
