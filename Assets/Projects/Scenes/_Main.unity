@@ -2568,7 +2568,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -4450882044037096650, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 1263111715868034790, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_SelectActionValue:
     m_UseReference: 1
@@ -4388,7 +4388,6 @@ GameObject:
   - component: {fileID: 1934352455}
   - component: {fileID: 1934352454}
   - component: {fileID: 1934352453}
-  - component: {fileID: 1934352456}
   m_Layer: 15
   m_Name: LeftHand Direct Interactor
   m_TagString: Untagged
@@ -4766,22 +4765,6 @@ MonoBehaviour:
     m_Reference: {fileID: -1636515391019944688, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &1934352456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934352451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841500c1bc64d3a478658b4a54b55954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 362931}
-  target: {fileID: 2052891960}
-  thresholdAngle: 30
-  thresholdDuration: 2
 --- !u!1 &1943258302
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,12 +5049,6 @@ AudioSource:
 --- !u!224 &2052891958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2588186095214401837, guid: 9f3b4f5275bf34b4f9d4671dbfc36754,
-    type: 3}
-  m_PrefabInstance: {fileID: 612258122}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &2052891960 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2588186095214401838, guid: 9f3b4f5275bf34b4f9d4671dbfc36754,
     type: 3}
   m_PrefabInstance: {fileID: 612258122}
   m_PrefabAsset: {fileID: 0}
