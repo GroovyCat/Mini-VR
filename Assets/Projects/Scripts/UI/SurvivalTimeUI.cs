@@ -21,10 +21,11 @@ public class SurvivalTimeUI : MonoBehaviour
 
     private void Update()
     {
+        float currentTime = Time.time - startTime;
         if (!enabled)
             return;
 
-        textUI.text = $"Survival Time\n{Time.time - startTime:0.0}s";
+        textUI.text = $"Survival Time\n{currentTime:0.0}s";
     }
 
 }
