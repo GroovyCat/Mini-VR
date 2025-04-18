@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject prefab;
+    public GameObject[] prefab;
 
     public bool playOnStart = true;
     public float startFactor = 1f;
@@ -54,6 +54,7 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        Instantiate(prefab, transform.position, transform.rotation, transform);
+        int index = Random.Range(0, 2);
+        Instantiate(prefab[index], transform.position, transform.rotation, transform);
     }
 }

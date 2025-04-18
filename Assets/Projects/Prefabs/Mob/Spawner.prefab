@@ -128,7 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10816d9ea938ee146b100efa39c0cd7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3387089535731134755, guid: 88c9db3133977dc4ea5ff758b7dfd960, type: 3}
+  prefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   playOnStart: 1
   startFactor: 1
   additiveFactor: 0.1
