@@ -1,16 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Shooter : MonoBehaviour
 {
-    public LayerMask hittableMask;
-    public Transform shootPoint;
-    public GameObject hitEffectPrefab;
+    public LayerMask hittableMask; // 맞혀진 레이어
+    public Transform shootPoint; // 쏜 지점
+    public GameObject hitEffectPrefab; // 이펙트 프리팹
 
-    public float shootDelay = 0.1f;
-    public float maxDistance = 100f;
+    public float shootDelay = 0.1f; // 샷 지연 시간
+    public float maxDistance = 100f; // 거리
 
     public UnityEvent<Vector3> OnShootSuccess;
     public UnityEvent OnShootFail;

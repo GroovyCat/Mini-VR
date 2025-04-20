@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject[] prefab;
+    public GameObject[] prefab; // 몬스터 프리팹 배열
 
-    public bool playOnStart = true;
-    public float startFactor = 1f;
-    public float additiveFactor = 0.1f;
-    public float delayPerSpawnGroup = 3f;
+    public bool playOnStart = true; 
+    public float startFactor = 1f; // 시작 시간 
+    public float additiveFactor = 0.1f; // 추가 지연 시간
+    public float delayPerSpawnGroup = 3f; // 각 스폰 지연 시간
 
     private void Start()
     {
@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnProcess(float factor)
     {
-        var count = Random.Range(factor, factor * 2f);
+        var count = Random.Range(factor, factor * 2f); // 몹 생성 개수
 
         for (int i = 0; i < count; i++)
         {
@@ -54,7 +54,7 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        int index = Random.Range(0, 2);
+        int index = Random.Range(0, 2); // 랜덤 몹
         Instantiate(prefab[index], transform.position, transform.rotation, transform);
     }
 }

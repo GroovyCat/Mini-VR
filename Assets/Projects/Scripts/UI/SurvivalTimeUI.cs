@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -21,7 +19,7 @@ public class SurvivalTimeUI : MonoBehaviour
 
     private void Update()
     {
-        float currentTime = Time.time - startTime;
+        float currentTime = Time.time - startTime; // 현재 시간
         if (!enabled)
             return;
 

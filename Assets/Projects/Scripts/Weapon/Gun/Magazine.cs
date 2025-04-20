@@ -1,15 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Magazine : MonoBehaviour, IReloadable
 {
-    public int maxBullets = 20;
-    public float chargingTime = 2f;
+    public int maxBullets = 20; // 총알 수
+    public float chargingTime = 2f; // 충전 시간
 
     private int currentBullets;
-    private int CurrentBullets
+
+    private int CurrentBullets // 속성
     {
         get => currentBullets;
         set
@@ -26,8 +26,8 @@ public class Magazine : MonoBehaviour, IReloadable
         }
     }
 
-    public UnityEvent OnReloadStart;
-    public UnityEvent OnReloadComplete;
+    public UnityEvent OnReloadStart; // 재장전 시간 이벤트
+    public UnityEvent OnReloadComplete; // 재장전 완료 이벤트
 
     public UnityEvent<int> OnBulletsChanged;
     public UnityEvent<float> OnChargeChanged;
@@ -62,7 +62,7 @@ public class Magazine : MonoBehaviour, IReloadable
         StopAllCoroutines();
     }
 
-    private IEnumerator ReloadProcesser()
+    private IEnumerator ReloadProcesser() // 총 재장전 실행 코루틴
     {
         OnReloadStart?.Invoke();
 

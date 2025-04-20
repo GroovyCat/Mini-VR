@@ -1,23 +1,22 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class TeleportActionHandler : MonoBehaviour
 {
-    public InputActionReference inputActionRef;
+    public InputActionReference inputActionRef; // inputsystem에서 사용할 인터렉션 키 정보
 
     public UnityEvent OnShow;
     public UnityEvent OnHide;
 
-    private void OnEnable()
+    private void OnEnable() // 이벤트 처리
     {
         inputActionRef.action.performed += OnPerformed;
         inputActionRef.action.canceled += OnCanceled;
     }
 
-    private void OnDisable()
+    private void OnDisable() //이벤트 처리
     {
         inputActionRef.action.performed += OnPerformed;
         inputActionRef.action.canceled += OnCanceled;

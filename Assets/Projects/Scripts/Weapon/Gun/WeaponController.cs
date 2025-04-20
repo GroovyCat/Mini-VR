@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class WeaponController : MonoBehaviour
 {
-    public UnityEvent OnGrab;
-    public UnityEvent OnRelease;
+    public UnityEvent OnGrab; // 그랩 인터랙션 이벤트
+    public UnityEvent OnRelease; // 그랩 인터랙션 종료 시 이벤트
 
     public void Grab(SelectEnterEventArgs args)
     {

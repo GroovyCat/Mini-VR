@@ -3,16 +3,16 @@ using UnityEngine.Events;
 
 public class MobController : MonoBehaviour
 {
-    public UnityEvent OnCreated;
-    public UnityEvent OnDestroyed;
+    public UnityEvent OnCreated; // 몬스터 생성 이벤트
+    public UnityEvent OnDestroyed; // 몬스터 삭제 이벤트
 
-    public float destroyDelay = 1f;
-    private bool isDestroyed = false;
+    public float destroyDelay = 1f; // 삭제 지연 시간
+    private bool isDestroyed = false; // 삭제 여부
 
     private void Start()
     {
-        OnCreated?.Invoke();
-        MobManager.Instance.OnSpawned(this);
+        OnCreated?.Invoke(); //  Update 함수 사이클에 실행
+        MobManager.Instance.OnSpawned(this); // 싱글톤 패턴
     }
 
 
@@ -26,6 +26,6 @@ public class MobController : MonoBehaviour
         Destroy(gameObject, destroyDelay);
 
         OnDestroyed?.Invoke();
-        MobManager.Instance.OnDestroyed(this);
+        MobManager.Instance.OnDestroyed(this); // 싱글톤 패턴
     }
 }

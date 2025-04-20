@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RayVisualizer : MonoBehaviour
@@ -31,7 +30,7 @@ public class RayVisualizer : MonoBehaviour
         reticlePoint.SetActive(false);
     }
 
-    private IEnumerator Process()
+    private IEnumerator Process() // 레이 선 처리 작업 코루틴
     {
         while (true)
         {

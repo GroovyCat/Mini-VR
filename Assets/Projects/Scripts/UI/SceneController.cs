@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
-    public void SceneChange()
+    public void SceneChange() 
     {
-        SceneManager.LoadScene("_Main");
+        SceneManager.LoadScene("_Main"); // ¾À ÀüÈ¯
     }
 }

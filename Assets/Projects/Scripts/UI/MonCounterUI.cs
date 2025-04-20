@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class MonCounterUI : MonoBehaviour
 {
-    private int killCount;
-    private int spawnCount;
+    private int killCount; // kill 횟수
+    private int spawnCount; // 스폰 횟수
 
-    private TextMeshProUGUI textUI;
+    private TextMeshProUGUI textUI; // 텍스트 UI
 
     private void Awake()
     {
@@ -29,13 +27,13 @@ public class MonCounterUI : MonoBehaviour
         UpdateUI();
     }
 
-    public void OnSpawn()
+    public void OnSpawn() // 스폰 카운트 
     {
         spawnCount++;
         UpdateUI();
     }
 
-    public void OnKill()
+    public void OnKill() // 킬 카운트
     {
         killCount++;
         UpdateUI();
